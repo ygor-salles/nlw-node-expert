@@ -1,0 +1,88 @@
+{
+	"info": {
+		"_postman_id": "97b0f691-4451-4476-b602-61d5d6ca34c8",
+		"name": "nlw expert nodejs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12415739"
+	},
+	"item": [
+		{
+			"name": "create poll",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Qual o melhor framework Node.JS?\",\n    \"options\": [\"Express\", \"Fastify\", \"NestJS\", \"HapiJS\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3333/polls",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"polls"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get poll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3333/polls/48b0346c-eb6e-4e2b-bf09-4c78df88ad8a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"polls",
+						"48b0346c-eb6e-4e2b-bf09-4c78df88ad8a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "vote on poll",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"pollOptionId\": \"719ceb4f-d46c-40e1-ada5-136a3a5c58ee\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3333/polls/48b0346c-eb6e-4e2b-bf09-4c78df88ad8a/votes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"polls",
+						"48b0346c-eb6e-4e2b-bf09-4c78df88ad8a",
+						"votes"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
